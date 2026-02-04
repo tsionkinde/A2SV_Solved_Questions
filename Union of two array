@@ -1,0 +1,7 @@
+class Solution:    
+    def findUnion(self, a, b):
+        
+        # code here
+        result=a+b
+        my_set=set(result)
+        return sorted(my_set)
