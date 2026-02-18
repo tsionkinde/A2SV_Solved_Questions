@@ -1,0 +1,29 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    s = input()
+
+    ans = float('inf')
+
+    for i in range(n):
+
+
+        if i + 1 < n and s[i:i+2] == "aa":
+            ans = 2
+
+       
+        if i + 2 < n and (s[i:i+3] == "aba" or s[i:i+3] == "aca"):
+            ans = min(ans, 3)
+
+   
+        if i + 3 < n and (s[i:i+4] == "abca" or s[i:i+4] == "acba"):
+            ans = min(ans, 4)
+
+        if i + 6 < n and (s[i:i+7] == "abbacca" or s[i:i+7] == "accabba"):
+            ans = min(ans, 7)
+
+    if ans == float('inf'):
+        print(-1)
+    else:
+        print(ans)
