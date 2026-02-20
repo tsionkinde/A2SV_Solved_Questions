@@ -1,8 +1,8 @@
 n=int(input())
 no_of_question=list(map(int,input().split()))
-days=1
+days=0
 no_of_question.sort()
 for q in no_of_question:
     if q>= days:
         days+=1
-print(days-1) 
+print(days) 
